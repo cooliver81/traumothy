@@ -7,6 +7,9 @@ TagManager:
   - NPC1
   - NPC2
   - NPC3
+  - Enemy
+  - End
+  - Lives
   layers:
   - Default
   - TransparentFX

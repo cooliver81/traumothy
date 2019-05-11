@@ -22,35 +22,31 @@ public class ClownMove : MonoBehaviour
     public int flip;
     public float count = 0;
     public float time = 20f;
+    public float timer = 0f;
 
     int answer;
 
-    bool isMoving1 = false, isMoving2 = false, start = true, guess = false;
+    bool isMoving1 = false, isMoving2 = false, start = true, guess = false, pressed = false, isDone = false;
+    bool animStarting = false;
 
     // Use this for initialization
     void Start()
     {
-        /*
-        winner = Random.Range(1, 4);
-        Debug.Log(winner);
-        //animate clown: 
+        cup1.transform.position = new Vector2(-3, 0);
+        cup2.transform.position = new Vector2(0, 0);
+        cup3.transform.position = new Vector2(3, 0);
+        pos1.transform.position = new Vector2(-3, 0);
+        pos2.transform.position = new Vector2(0, 0);
+        pos3.transform.position = new Vector2(3, 0);
 
-        switch (winner)
-        {
-            case 1:
-                final = pos1.transform.position;
-                break;
-            case 2:
-                final = pos2.transform.position;
-                break;
-            case 3:
-                final = pos3.transform.position;
-                break;
-        }
+        level = 1;
 
-        //&& cup2.transform.position == final
-        */
+        count = 0;
 
+        speed = 1.5f;
+        cup2.GetComponentInChildren<Animator>().SetTrigger("Start");
+        animStarting = true;
+        StartTimer();
 
 
     }
@@ -139,18 +135,31 @@ public class ClownMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (count < 10)
+        if (animStarting)
+            StartTimer();
+
+        if (pressed)
+            StartTimer();
+
+        CheckTimer();
+        CheckDone();
+
+        if (count < 3 && animStarting == false)
         {
             Shuffle();
             Wait();
         }
-        else guess = true;
+        else
+        {
+            guess = true;
+        }
 
-        if (guess)
+        if (guess && pressed == false)
         {
             if (Input.GetKeyDown("1"))
             {
-                CheckAnswer(-0.5763897f);
+                CheckAnswer(-3f);
+
             }
             if (Input.GetKeyDown("2"))
             {
@@ -158,18 +167,23 @@ public class ClownMove : MonoBehaviour
             }
             if (Input.GetKeyDown("3"))
             {
-                CheckAnswer(0.5763897f);
+                CheckAnswer(3f);
+
             }
+            guess = false;
         }
     }
 
-    void CheckAnswer(float answer)
+    void CheckDone()
     {
-        float win = cup2.transform.position.x;
-
-        if (answer == win)
+        if (isDone)
         {
-            Debug.Log("WIN");
+            isDone = false;
+            ResetTimer();
+            pressed = false;
+            cup2.GetComponentInChildren<Animator>().SetBool("isRight", false); //Resets animation
+            cup2.GetComponentInChildren<Animator>().SetBool("isWrong", false);
+
             switch (level)
             {
                 case 3:
@@ -182,10 +196,57 @@ public class ClownMove : MonoBehaviour
                     break;
             }
         }
+    }
+
+    void CheckTimer()
+    {
+        if (animStarting == true)
+        {
+            if (timer >= 2.5f)
+            {
+                animStarting = false;
+                ResetTimer();
+            }
+        }
         else
         {
+            if (timer >= 2f)
+                isDone = true;
+        }
+    }
+
+    void CheckAnswer(float answer)
+    {
+        float win = cup2.transform.position.x;
+
+        if (answer == win)
+        { 
+            pressed = true;
+            guess = false;
+            cup2.GetComponentInChildren<Animator>().SetBool("isRight", true);
+            cup2.GetComponentInChildren<Animator>().SetBool("isWrong", false);
+
+            Debug.Log("WIN");
+            //isDone
+        }
+        else
+        {
+            pressed = true;
+            cup2.GetComponentInChildren<Animator>().SetBool("isRight", false);
+            cup2.GetComponentInChildren<Animator>().SetBool("isWrong", true);
+
             Debug.Log("LOSE");
         }
     }
 
+    void StartTimer()
+    {
+        timer += Time.deltaTime;
+        Debug.Log(timer);
+    }
+
+    void ResetTimer()
+    {
+        timer = 0;
+    }
 }

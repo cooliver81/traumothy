@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Clown.unity
+- path: Assets/Scenes/Old Lady.unity
   isLoaded: 1
   isActive: 1

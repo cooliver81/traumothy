@@ -144,7 +144,7 @@ public class ClownMove : MonoBehaviour
         CheckTimer();
         CheckDone();
 
-        if (count < 3 && animStarting == false)
+        if (count < 6 && animStarting == false)
         {
             Shuffle();
             Wait();

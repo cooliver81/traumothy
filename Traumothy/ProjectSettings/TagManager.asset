@@ -20,10 +20,10 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Bullet
+  - Wall
+  - Player
+  - Enemy
   - 
   - 
   - 

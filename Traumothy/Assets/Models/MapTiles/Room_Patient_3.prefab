@@ -426,6 +426,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4402955737109702}
+  - component: {fileID: 114960532500467958}
+  - component: {fileID: 65782670345550086}
+  - component: {fileID: 65614659098501988}
   m_Layer: 0
   m_Name: Door_Set002
   m_TagString: Untagged
@@ -1751,7 +1754,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1297112933425542}
   m_LocalRotation: {x: -0.000000030908623, y: 0.7071068, z: 0.7071068, w: 0.000000030908623}
-  m_LocalPosition: {x: 0, y: 0.5839844, z: 4.1918945}
+  m_LocalPosition: {x: 42278.957, y: 20222.473, z: -2695.285}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4789708082473994}
@@ -4360,6 +4363,18 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300190, guid: 046d534ae66168c44a8d38095a3863b2, type: 3}
+--- !u!65 &65614659098501988
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259794818757836}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65708408762727546
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -4370,8 +4385,20 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.4098573, y: 1, z: 1.6210405}
+  m_Center: {x: -0.2049285, y: -0.000000053726144, z: -0.13631998}
+--- !u!65 &65782670345550086
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259794818757836}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7382807, y: 0.2714843, z: 1}
+  m_Center: {x: -0.31586298, y: -0.033674315, z: -1.4872461e-16}
 --- !u!111 &111422192210241954
 Animation:
   m_ObjectHideFlags: 1
@@ -4402,6 +4429,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 1
   openingNeeded: 0
+--- !u!114 &114960532500467958
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259794818757836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ff2a1092fc95348b3b1976f66dec86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalTime: 10
 --- !u!137 &137056992504882204
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -4416,7 +4455,7 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 7b9a4ed456336b343ac795a1013d5c48, type: 2}
-  - {fileID: 2100000, guid: c09733a7004b0d4439e23bb17d41596f, type: 2}
+  - {fileID: 2100000, guid: 781aa4dceb073ae4eaa273849893c9d6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -27,9 +27,9 @@ public class NPCInteractions : MonoBehaviour {
     // Use this for initialization
     void Start () {
         //SET NPC INFORMATION
-        information[0] = "Oliver is cool";
-        information[1] = "Celinetherapper";
-        information[2] = "helena stinks";
+        information[0] = "I remember the flashing lights... the spaceship... They did something to me! I'm not crazy!"; // war
+        information[1] = "I hate kisses... so many... germs... ew! Gandma no!"; // grandma -germs
+        information[2] = "Doctor help me! A clown is stalking me! I can see it wherever I go, it won't leave me alone!"; // clown
         dialogueOnScreen = false;
         dialogueBox = GameObject.Find("Box");
         dialogueBox.SetActive(false);

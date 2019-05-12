@@ -1197,6 +1197,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4561097332361332}
+  - component: {fileID: 114545398712156570}
+  - component: {fileID: 65428998920812044}
+  - component: {fileID: 65923538988134342}
   m_Layer: 0
   m_Name: Door_Set
   m_TagString: Untagged
@@ -1697,7 +1700,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1237813578423136}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.5839844, z: 0.12792969}
+  m_LocalPosition: {x: 42279.38, y: 20221.05, z: -2700.1125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4651753763800862}
@@ -4369,6 +4372,30 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
+  m_Size: {x: 1.3067135, y: 1.4593283, z: 1.4727157}
+  m_Center: {x: -0.023945728, y: 0.22966401, z: 0.23635931}
+--- !u!65 &65428998920812044
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1877630378145092}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.74609375, y: 0.1401367, z: 1}
+  m_Center: {x: -0.33398438, y: -0.015918203, z: 4.166714e-18}
+--- !u!65 &65923538988134342
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1877630378145092}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!111 &111790776771767006
@@ -4401,6 +4428,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 2
   openingNeeded: 0
+--- !u!114 &114545398712156570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1877630378145092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ff2a1092fc95348b3b1976f66dec86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalTime: 10
 --- !u!137 &137714087323553796
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -9,6 +9,8 @@ public class ProceduralGenerator : MonoBehaviour {
     int numberTurns = 100;
     int startingPos;
 
+    public int numPatients = 0;
+
     // List of prefabs maptiles
     [SerializeField] GameObject[] rooms;
     [SerializeField] GameObject[] roomsR;
@@ -132,6 +134,7 @@ public class ProceduralGenerator : MonoBehaviour {
                 if(direction == 2)
                     return corridorsB[Random.Range(0, 2)];
                 if (room.transform.GetChild(0).GetComponent<JointPoints>().openingDirection == direction) {
+                    numPatients++;
                     return room;
                 }
             }

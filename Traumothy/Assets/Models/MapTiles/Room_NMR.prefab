@@ -71,6 +71,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4863512557617072}
+  - component: {fileID: 65426346021317066}
   m_Layer: 0
   m_Name: Door_Set008
   m_TagString: Untagged
@@ -1241,7 +1242,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1311234470060754}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.5839844, z: -2.5922852}
+  m_LocalPosition: {x: 42261.008, y: 20251.393, z: -2702.3936}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4714176580872066}
@@ -1500,7 +1501,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1058349143357758}
-  m_LocalRotation: {x: -0.7425843, y: 0.060059074, z: -0.09442401, w: -0.6603375}
+  m_LocalRotation: {x: -0.74038774, y: 0.0828529, z: -0.074084915, w: -0.66292745}
   m_LocalPosition: {x: 0.383, y: 0.1384278, z: -0.4414063}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1508,7 +1509,7 @@ Transform:
   - {fileID: 4311682897325448}
   m_Father: {fileID: 4250313198310884}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 97.22699, y: -28.959991, z: -376.393}
+  m_LocalEulerAnglesHint: {x: 96.32001, y: 0.07699585, z: -347.161}
 --- !u!4 &4573725729809040
 Transform:
   m_ObjectHideFlags: 1
@@ -3014,6 +3015,18 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300688, guid: 046d534ae66168c44a8d38095a3863b2, type: 3}
+--- !u!65 &65426346021317066
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1050371749406382}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.69921875, y: 0.17529286, z: 1.0565014}
+  m_Center: {x: -0.32617188, y: 0.020457163, z: 0.028250724}
 --- !u!65 &65853816825542794
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -3024,8 +3037,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.7488748, y: 1.4944062, z: 1.5166063}
+  m_Center: {x: -0.34317026, y: 0.24720493, z: 0.25830218}
 --- !u!111 &111439291534933736
 Animation:
   m_ObjectHideFlags: 1

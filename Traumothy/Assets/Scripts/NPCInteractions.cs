@@ -10,6 +10,10 @@ public class NPCInteractions : MonoBehaviour {
 
     public GameObject dialogueBox;
 
+    public GameManager gm;
+    public GameObject text;
+
+
     public bool isTriggered = false;
     private enum NPC_ID {NPC1, NPC2, NPC3};
     NPC_ID npcID;
@@ -51,20 +55,18 @@ public class NPCInteractions : MonoBehaviour {
                 {
                     case NPC_ID.NPC1:
                         Debug.Log("NPC1 triggered");
-                        levelchanger.fadeToLevel(2);
-                        //SceneManager.LoadScene(2);
+
+                        gm.StartWar();
                         CheckClipboard(0);
                         break;
                     case NPC_ID.NPC2:
                         Debug.Log("NPC2 triggered");
-                        levelchanger.fadeToLevel(3);
-                        //SceneManager.LoadScene(3);
+                        gm.StartGrandma();
                         CheckClipboard(1);
                         break;
                     case NPC_ID.NPC3:
                         Debug.Log("NPC3 triggered");
-                        levelchanger.fadeToLevel(2);
-                        //SceneManager.LoadScene(4);
+                        gm.StartClown();
                         CheckClipboard(2);
                         break;
                 }

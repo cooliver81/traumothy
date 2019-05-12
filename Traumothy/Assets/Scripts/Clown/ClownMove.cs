@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class ClownMove : MonoBehaviour
 {
 
+    public GameManager gm;
+    public Camera cam;
+
     public int level = 1;
 
     public float speed = 1.5f;
@@ -135,6 +138,17 @@ public class ClownMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.paused)
+        {
+
+            GameManager.mainCam.enabled = false;
+        }
+        else
+        {
+            GameManager.mainCam.enabled = true;
+            cam.enabled = false;
+        }
+
         if (animStarting)
             StartTimer();
 
@@ -187,7 +201,10 @@ public class ClownMove : MonoBehaviour
             switch (level)
             {
                 case 3:
-                    SceneManager.LoadScene("scene");
+                    GameManager.patientRescued++;
+                    GameManager.paused = false;
+                    GameManager.mainCam.enabled = true;
+                    gm.ResumeMainGame(4);
                     break;
                 default:
                     speed /= 2;

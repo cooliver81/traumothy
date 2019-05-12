@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Enemy : MonoBehaviour {
 
     public Vector2 startForce = new Vector2(1f, 1f);
+    public GameManager gm;
+    public Camera cam;
 
     public float speed = 3f;
 
@@ -22,6 +24,17 @@ public class Enemy : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (GameManager.paused)
+        {
+
+            GameManager.mainCam.enabled = false;
+        }
+        else
+        {
+            GameManager.mainCam.enabled = true;
+            cam.enabled = false;
+        }
+
         transform.Rotate(0, 0, 100 * Time.deltaTime);
         Debug.Log(speed);
     }
@@ -32,7 +45,10 @@ public class Enemy : MonoBehaviour {
         {
             if (counter > 3)
             {
-                SceneManager.LoadScene("scene");
+                GameManager.patientRescued++;
+                GameManager.paused = false;
+                GameManager.mainCam.enabled = true;
+                gm.ResumeMainGame(2);
             }
             speed++;
             counter++;

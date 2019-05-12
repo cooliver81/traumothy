@@ -9,6 +9,9 @@ public class OL_PlayerController : MonoBehaviour {
     public Vector3 offset;
     public float speed = 10f;
 
+    public GameManager gm;
+    public Camera cam;
+
     public GameObject player;
     public GameObject livesIcon;
     public OL_PlatFormMovement platformMov;
@@ -29,6 +32,17 @@ public class OL_PlayerController : MonoBehaviour {
 
     private void Update()
     {
+        if (GameManager.paused)
+        {
+
+            GameManager.mainCam.enabled = false;
+        }
+        else
+        {
+            GameManager.mainCam.enabled = true;
+            cam.enabled = false;
+        }
+
         checkLives();
         //Bug fix
         if (offset.x == -3.08f)
@@ -126,6 +140,10 @@ public class OL_PlayerController : MonoBehaviour {
         {
             Debug.Log("we are in the endgame");
             platformMov.enabled = false;
+            GameManager.patientRescued++;
+            GameManager.paused = false;
+            GameManager.mainCam.enabled = true;
+            gm.ResumeMainGame(3);
         }
     }
 

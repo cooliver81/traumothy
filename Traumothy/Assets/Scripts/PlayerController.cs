@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour {
     public float walkSpeed = 2;
     public float runSpeed = 6;
 
-    //Animator animator;
+    public Animator animator;
     Transform cameraT;
 
     public float turnSmoothTime = 0.2f;
@@ -19,20 +19,22 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-       // animator = GetComponent<Animator>();
         cameraT = Camera.main.transform;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         Vector2 inputDir = input.normalized;
 
         if (inputDir != Vector2.zero)
         {
+            animator.SetBool("isWalking", true);
             float targetRotation = Mathf.Atan2(inputDir.x, inputDir.y) * Mathf.Rad2Deg + cameraT.eulerAngles.y;
             transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, turnSmoothTime);
         }
+        else
+            animator.SetBool("isWalking", false);
 
         bool running = Input.GetKey(KeyCode.LeftShift);
         float targetSpeed = (running) ? runSpeed : walkSpeed * inputDir.magnitude;
@@ -40,8 +42,8 @@ public class PlayerController : MonoBehaviour {
 
         transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
 
-        //float animationSpeedPercent = ((running) ? 1 : 0.5f) * inputDir.magnitude;
-        //animator.SetFloat("speedPercent", animationSpeedPercent, speedSmoothTime, Time.deltaTime);
+        float animationSpeedPercent = ((running) ? 1 : 0.5f) * inputDir.magnitude;
+        animator.SetFloat("speedPercent", animationSpeedPercent, speedSmoothTime, Time.deltaTime);
 
     }
 }

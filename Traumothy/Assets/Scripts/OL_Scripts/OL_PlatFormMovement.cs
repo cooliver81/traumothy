@@ -7,12 +7,9 @@ public class OL_PlatFormMovement : MonoBehaviour
 
     public float speed = 0.1f;
     public GameObject platform;
+    
 
     // Use this for initialization
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void FixedUpdate()

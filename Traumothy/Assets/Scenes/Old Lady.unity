@@ -480,6 +480,48 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 274505898}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1001 &1452399565
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4536267076199442, guid: 9b5076b7ddb91124da4a4e770b7354e9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536267076199442, guid: 9b5076b7ddb91124da4a4e770b7354e9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536267076199442, guid: 9b5076b7ddb91124da4a4e770b7354e9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536267076199442, guid: 9b5076b7ddb91124da4a4e770b7354e9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536267076199442, guid: 9b5076b7ddb91124da4a4e770b7354e9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536267076199442, guid: 9b5076b7ddb91124da4a4e770b7354e9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536267076199442, guid: 9b5076b7ddb91124da4a4e770b7354e9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536267076199442, guid: 9b5076b7ddb91124da4a4e770b7354e9, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9b5076b7ddb91124da4a4e770b7354e9, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1529940925 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1410558316015024, guid: be27a6d40e1593249b32a3c21edab017,

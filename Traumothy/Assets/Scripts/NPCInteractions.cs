@@ -6,11 +6,13 @@ using UnityEngine.UI;
 
 public class NPCInteractions : MonoBehaviour {
 
+
     public GameManager gm;
 
     private GameObject NPCTriggered;
 
     public GameObject dialogueBox;
+
 
     public bool isTriggered = false;
     private enum NPC_ID {NPC1, NPC2, NPC3};
@@ -53,6 +55,7 @@ public class NPCInteractions : MonoBehaviour {
                 {
                     case NPC_ID.NPC1:
                         Debug.Log("NPC1 triggered");
+
                         gm.StartWar();
                         //levelchanger.fadeToLevel(2);
                         CheckClipboard(0);

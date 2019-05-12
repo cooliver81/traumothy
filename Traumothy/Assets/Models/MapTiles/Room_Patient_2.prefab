@@ -668,6 +668,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4522072909263770}
+  - component: {fileID: 95623968569379214}
   m_Layer: 0
   m_Name: Door_Set001
   m_TagString: Untagged
@@ -4371,6 +4372,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &95623968569379214
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1441568548464934}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e11917a2f26428c408537dc501579ef1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!111 &111984934720831654
 Animation:
   m_ObjectHideFlags: 1

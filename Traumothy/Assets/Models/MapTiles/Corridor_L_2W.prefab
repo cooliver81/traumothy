@@ -2094,6 +2094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDirection: 1
+  openingNeeded: 0
 --- !u!114 &114750940675298168
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2106,3 +2107,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDirection: 2
+  openingNeeded: 0

@@ -18,7 +18,7 @@ public class ClownMove : MonoBehaviour
     public GameObject cup3;
 
     public GameObject pos1, pos2, pos3;
-    Vector2 temp;
+    Vector3 temp;
 
     public int winner;
     public Vector3 final;
@@ -26,6 +26,9 @@ public class ClownMove : MonoBehaviour
     public float count = 0;
     public float time = 20f;
     public float timer = 0f;
+
+    public AudioSource scream;
+    public AudioSource laugh;
 
     int answer;
 
@@ -35,12 +38,12 @@ public class ClownMove : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        cup1.transform.position = new Vector2(-3, 0);
-        cup2.transform.position = new Vector2(0, 0);
-        cup3.transform.position = new Vector2(3, 0);
-        pos1.transform.position = new Vector2(-3, 0);
-        pos2.transform.position = new Vector2(0, 0);
-        pos3.transform.position = new Vector2(3, 0);
+        cup1.transform.position = new Vector3(-3, 0, -1);
+        cup2.transform.position = new Vector3(0, 0, -2);
+        cup3.transform.position = new Vector3(3, 0, -1);
+        pos1.transform.position = new Vector3(-3, 0, -1);
+        pos2.transform.position = new Vector3(0, 0, -2);
+        pos3.transform.position = new Vector3(3, 0, -1);
 
         level = 1;
 
@@ -94,7 +97,7 @@ public class ClownMove : MonoBehaviour
         yield return new WaitForSeconds(2);
     }
 
-    IEnumerator move1(Transform fromPosition, Vector2 toPosition, float duration)
+    IEnumerator move1(Transform fromPosition, Vector3 toPosition, float duration)
     {
         start = false;
         if (isMoving1)
@@ -104,18 +107,18 @@ public class ClownMove : MonoBehaviour
         isMoving1 = true;
         float counter = 0;
         //Get the current position of the object to be moved
-        Vector2 startPos = fromPosition.position;
+        Vector3 startPos = fromPosition.position;
         count++;
         while (counter < duration)
         {
             counter += Time.deltaTime;
-            fromPosition.position = Vector2.Lerp(startPos, toPosition, counter / duration);
+            fromPosition.position = Vector3.Lerp(startPos, toPosition, counter / duration);
             yield return null;
         }
         isMoving1 = false;
     }
 
-    IEnumerator move2(Transform fromPosition, Vector2 toPosition, float duration)
+    IEnumerator move2(Transform fromPosition, Vector3 toPosition, float duration)
     {
         if (isMoving2)
         {
@@ -124,11 +127,11 @@ public class ClownMove : MonoBehaviour
         isMoving2 = true;
         float counter = 0;
         //Get the current position of the object to be moved
-        Vector2 startPos = fromPosition.position;
+        Vector3 startPos = fromPosition.position;
         while (counter < duration)
         {
             counter += Time.deltaTime;
-            fromPosition.position = Vector2.Lerp(startPos, toPosition, counter / duration);
+            fromPosition.position = Vector3.Lerp(startPos, toPosition, counter / duration);
             yield return null;
         }
         isMoving2 = false;
@@ -242,7 +245,7 @@ public class ClownMove : MonoBehaviour
             guess = false;
             cup2.GetComponentInChildren<Animator>().SetBool("isRight", true);
             cup2.GetComponentInChildren<Animator>().SetBool("isWrong", false);
-
+            scream.Play(0);
             Debug.Log("WIN");
             //isDone
         }
@@ -251,7 +254,7 @@ public class ClownMove : MonoBehaviour
             pressed = true;
             cup2.GetComponentInChildren<Animator>().SetBool("isRight", false);
             cup2.GetComponentInChildren<Animator>().SetBool("isWrong", true);
-
+            laugh.Play(0);
             Debug.Log("LOSE");
         }
     }

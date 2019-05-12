@@ -12,6 +12,7 @@ public class Bullet : MonoBehaviour {
 
     public GameObject player;
 
+    public AudioSource pew;
 
     public static bool isLoaded = true;
 
@@ -27,8 +28,10 @@ public class Bullet : MonoBehaviour {
 		    if (Input.GetKeyDown(KeyCode.Space))
             {
                 playerControl.enabled = false;
+                isLoaded = false;
                 Vector2 v = transform.up * speed;  // -transform.right = left
                 rb.velocity = v;  // Sets velocity to left movement
+                pew.Play(0);
             }
         }
         else
@@ -41,6 +44,7 @@ public class Bullet : MonoBehaviour {
     {
         Debug.Log("test");
         transform.position = player.transform.position;
+        isLoaded = true;
     }
 
     void FixedUpdate()

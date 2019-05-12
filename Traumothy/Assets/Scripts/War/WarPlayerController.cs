@@ -17,6 +17,8 @@ public class WarPlayerController : MonoBehaviour {
     public GameObject health2;
     public GameObject health3;
 
+    public AudioSource explosion;
+
     // Use this for initialization
     void Start () {
       
@@ -37,6 +39,7 @@ public class WarPlayerController : MonoBehaviour {
     {
         if ( this.gameObject.layer == 11 && collision.gameObject.layer == 12) {
             lives--;
+            explosion.Play(0);
             switch (lives)
             {
                 case 2:

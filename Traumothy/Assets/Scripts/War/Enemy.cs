@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour {
 
     public Rigidbody2D rb;
 
+    public AudioSource explosion;
+
     // Use this for initialization
     void Start() {
         transform.position = new Vector2(-0.55f, 1.22f);
@@ -43,6 +45,7 @@ public class Enemy : MonoBehaviour {
     {
         if (collision.gameObject.layer == 9 )
         {
+            explosion.Play(0);
             if (counter > 3)
             {
                 GameManager.patientRescued++;

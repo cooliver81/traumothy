@@ -8,3 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 891b94c517482fe4a903c2578bf5225b
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: 1b79dbc72ba1fc04b946cd479d663996
+  - enabled: 1
+    path: Assets/Scenes/War.unity
+    guid: 706a15adddba3ad40979b9c1950d3747
+  - enabled: 1
+    path: Assets/Scenes/Old Lady.unity
+    guid: cb6f99064c21ff94280ce91483c5d10e
+  - enabled: 1
+    path: Assets/Scenes/Clown.unity
+    guid: e0de9395a6bebe44e97494f950175781

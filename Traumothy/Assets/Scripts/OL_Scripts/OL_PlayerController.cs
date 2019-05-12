@@ -25,6 +25,8 @@ public class OL_PlayerController : MonoBehaviour {
     private bool isHit = false;
     private bool isDead = false;
 
+    public AudioSource smoochHurt;
+
     // Use this for initialization
     void Start () {
        
@@ -134,6 +136,7 @@ public class OL_PlayerController : MonoBehaviour {
             lives--;
             InvokeRepeating("Blink", 0, blinkingSpeed);
             player.SetActive(true);
+            smoochHurt.Play(0);
         }
 
         if (other.gameObject.tag == "End")

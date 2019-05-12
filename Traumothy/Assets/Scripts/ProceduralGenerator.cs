@@ -12,6 +12,7 @@ public class ProceduralGenerator : MonoBehaviour {
 
     // List of prefabs maptiles
     [SerializeField] GameObject[] rooms;
+    [SerializeField] GameObject[] roomsR;
 
     // Prefabs by type
     [SerializeField] GameObject[] corridorsT;
@@ -64,7 +65,7 @@ public class ProceduralGenerator : MonoBehaviour {
         GameObject maptile = instantiatePrefab(mapPosition, toInstantiate);
 
         // Check if we still want to instantiate corridors
-        //Debug.Log("Number of turns: " + turns);
+        Debug.Log("Number of turns: " + turns);
         if (turns != 0)
         {
             // Decide random number of corridors to instantiate
@@ -129,19 +130,21 @@ public class ProceduralGenerator : MonoBehaviour {
 
         if (searchingRooms){
             foreach (GameObject room in rooms) { // rooms have only 1 jointpoint (door)
+                if(direction == 2)
+                    return corridorsB[Random.Range(0, 2)];
                 if (room.transform.GetChild(0).GetComponent<JointPoints>().openingDirection == direction) {
                     return room;
                 }
             }
         } else { // Searching corridors
             if (direction == 1) {
-                 return corridorsT[Random.Range(0, corridorsT.Length - 1)];
+                return corridorsB[Random.Range(0, corridorsB.Length)];
             } else if (direction == 2) {
-                 return corridorsB[Random.Range(0, corridorsB.Length - 1)];
+                return corridorsT[Random.Range(0, corridorsT.Length)];
             } else if (direction == 3) {
-                return corridorsL[Random.Range(0, corridorsL.Length - 1)];
+                return corridorsL[Random.Range(0, corridorsL.Length)];
             } else {
-                return corridorsR[Random.Range(0, corridorsR.Length - 1)];
+                return corridorsR[Random.Range(0, corridorsR.Length)];
             }      
         }
         return null;

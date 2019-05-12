@@ -72,6 +72,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4863512557617072}
   - component: {fileID: 65426346021317066}
+  - component: {fileID: 65492390731742180}
+  - component: {fileID: 114468556374032534}
   m_Layer: 0
   m_Name: Door_Set008
   m_TagString: Untagged
@@ -1242,7 +1244,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1311234470060754}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 42261.008, y: 20251.393, z: -2702.3936}
+  m_LocalPosition: {x: 42264.836, y: 20246.926, z: -2694.1248}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4714176580872066}
@@ -3027,6 +3029,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.69921875, y: 0.17529286, z: 1.0565014}
   m_Center: {x: -0.32617188, y: 0.020457163, z: 0.028250724}
+--- !u!65 &65492390731742180
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1050371749406382}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65853816825542794
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -3056,6 +3070,18 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!114 &114468556374032534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1050371749406382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ff2a1092fc95348b3b1976f66dec86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalTime: 10
 --- !u!114 &114663722130910018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3083,7 +3109,7 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 7b9a4ed456336b343ac795a1013d5c48, type: 2}
-  - {fileID: 2100000, guid: c09733a7004b0d4439e23bb17d41596f, type: 2}
+  - {fileID: 2100000, guid: 781aa4dceb073ae4eaa273849893c9d6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

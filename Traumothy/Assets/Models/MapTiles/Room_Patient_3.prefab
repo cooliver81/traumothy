@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 65708408762727546}
   m_Layer: 0
   m_Name: Patient (5)
-  m_TagString: NPC2
+  m_TagString: NPC3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1754,7 +1754,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1297112933425542}
   m_LocalRotation: {x: -0.000000030908623, y: 0.7071068, z: 0.7071068, w: 0.000000030908623}
-  m_LocalPosition: {x: 42278.957, y: 20222.473, z: -2695.285}
+  m_LocalPosition: {x: 42265.055, y: 20250.602, z: -2697.4497}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4789708082473994}
@@ -4455,7 +4455,7 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 7b9a4ed456336b343ac795a1013d5c48, type: 2}
-  - {fileID: 2100000, guid: 781aa4dceb073ae4eaa273849893c9d6, type: 2}
+  - {fileID: 2100000, guid: 7c411e13d072f2a449f85d2c130a70cc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

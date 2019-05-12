@@ -14,6 +14,9 @@ public class ProceduralGenerator : MonoBehaviour {
     // List of prefabs maptiles
     [SerializeField] GameObject[] rooms;
     [SerializeField] GameObject[] roomsR;
+    int R=0;
+    [SerializeField] GameObject[] roomsL;
+    int L=0;
 
     // Prefabs by type
     [SerializeField] GameObject[] corridorsT;
@@ -131,8 +134,23 @@ public class ProceduralGenerator : MonoBehaviour {
 
         if (searchingRooms){
             foreach (GameObject room in rooms) { // rooms have only 1 jointpoint (door)
-                if(direction == 2)
-                    return corridorsB[Random.Range(0, 2)];
+                if (direction == 3) {
+                    if (R == 0)
+                        R = 1;
+                    else
+                        R = 0;
+                    Debug.Log("OK");
+                   // return roomsR[Random.Range(0, roomsR.Length)];
+                    return roomsR[R];
+                }
+                if (direction == 4) {
+                    if (L == 0)
+                        L = 1;
+                    else
+                        L = 0;
+                    //return roomsL[Random.Range(0, roomsL.Length)];
+                    return roomsL[L];
+                }                
                 if (room.transform.GetChild(0).GetComponent<JointPoints>().openingDirection == direction) {
                     numPatients++;
                     return room;

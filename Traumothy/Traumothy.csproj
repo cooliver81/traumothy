@@ -86,6 +86,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\charCamera.cs" />
     <Compile Include="Assets\Scripts\Clown\ClownMove.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\GOTOMAIN.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\GOTOSCENE.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\LoadSceneOnClick.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\QuitOnClick.cs" />
     <Compile Include="Assets\Scripts\Move.cs" />
     <Compile Include="Assets\Scripts\NPCInteractions.cs" />
     <Compile Include="Assets\Scripts\OL_Scripts\OL_PlatFormMovement.cs" />

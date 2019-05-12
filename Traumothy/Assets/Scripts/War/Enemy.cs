@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour {
 
     public int counter = 0;
 
+    public AudioSource explosion;
+
     public Rigidbody2D rb;
 
     // Use this for initialization
@@ -43,7 +45,8 @@ public class Enemy : MonoBehaviour {
     {
         if (collision.gameObject.layer == 9 )
         {
-            if (counter > 3)
+            explosion.Play(0);
+            if (counter > 2)
             {
                 GameManager.patientRescued++;
                 GameManager.isRescued = true;

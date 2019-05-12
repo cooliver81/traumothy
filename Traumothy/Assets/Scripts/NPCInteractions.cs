@@ -7,11 +7,17 @@ using UnityEngine.UI;
 public class NPCInteractions : MonoBehaviour {
 
 
+    public AudioSource sneeze1;
+    public AudioSource sneeze2;
+    public AudioSource sneeze3;
+
     public GameManager gm;
 
     private GameObject NPCTriggered;
 
     public GameObject dialogueBox;
+
+    static public int numInteractions = 0;
 
     int spaceCount = 0;
     public bool isTriggered = false;
@@ -55,6 +61,7 @@ public class NPCInteractions : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.P))
             {
                 spaceCount = 0;
+                numInteractions++;
                 dialogueOnScreen = false;
                 dialogueBox.SetActive(false);
                 switch (npcID)
@@ -90,12 +97,15 @@ public class NPCInteractions : MonoBehaviour {
         {
             case NPC_ID.NPC1:
                 dialogueBox.transform.GetChild(2).GetComponent<Text>().text = information[0];
+                sneeze1.Play(0);
                 break;
             case NPC_ID.NPC2:
                 dialogueBox.transform.GetChild(2).GetComponent<Text>().text = information[1];
+                sneeze2.Play(0);
                 break;
             case NPC_ID.NPC3:
                 dialogueBox.transform.GetChild(2).GetComponent<Text>().text = information[2];
+                sneeze3.Play(0);
                 break;
         }
     }

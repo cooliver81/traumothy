@@ -1,0 +1,259 @@
+fileFormatVersion: 2
+guid: a565a811269ef2d42a726f49f7bb9243
+timeCreated: 1557691034
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Bed_Set007
+    100002: BlackBoard005
+    100004: Board
+    100006: Box012
+    100008: //RootNode
+    100010: Cabinet008
+    100012: Caller009
+    100014: curtain-019
+    100016: curtain-020
+    100018: Curtain_Set008
+    100020: Desk.001
+    100022: Door-018
+    100024: Door-019
+    100026: Door_Set009
+    100028: garbageCan033
+    100030: garbageCan034
+    100032: garbageCan035
+    100034: GarbageCan_Set011
+    100036: Lamp008
+    100038: Laptop
+    100040: Medic_Bed-00
+    100042: Medic_Bed-01
+    100044: Medic_Bed-02
+    100046: Medic_Bed-03
+    100048: Medic_Bed-04
+    100050: Medic_Bed-05
+    100052: Medic_Bed-06
+    100054: Medic_Bed-07
+    100056: Medic_Bed-08
+    100058: Medic_Bed-09
+    100060: Medic_Bed-10
+    100062: Medic_Bed-11
+    100064: Medic_Bed_c-00
+    100066: Medic_Bed_c-01
+    100068: MedicBed_C
+    100070: MedicBed_Set
+    100072: Office
+    100074: Room_Patient_1-019
+    100076: Room_Patient_1-020
+    100078: Tissue Box
+    100080: Tv_Set007
+    400000: Bed_Set007
+    400002: BlackBoard005
+    400004: Board
+    400006: Box012
+    400008: //RootNode
+    400010: Cabinet008
+    400012: Caller009
+    400014: curtain-019
+    400016: curtain-020
+    400018: Curtain_Set008
+    400020: Desk.001
+    400022: Door-018
+    400024: Door-019
+    400026: Door_Set009
+    400028: garbageCan033
+    400030: garbageCan034
+    400032: garbageCan035
+    400034: GarbageCan_Set011
+    400036: Lamp008
+    400038: Laptop
+    400040: Medic_Bed-00
+    400042: Medic_Bed-01
+    400044: Medic_Bed-02
+    400046: Medic_Bed-03
+    400048: Medic_Bed-04
+    400050: Medic_Bed-05
+    400052: Medic_Bed-06
+    400054: Medic_Bed-07
+    400056: Medic_Bed-08
+    400058: Medic_Bed-09
+    400060: Medic_Bed-10
+    400062: Medic_Bed-11
+    400064: Medic_Bed_c-00
+    400066: Medic_Bed_c-01
+    400068: MedicBed_C
+    400070: MedicBed_Set
+    400072: Office
+    400074: Room_Patient_1-019
+    400076: Room_Patient_1-020
+    400078: Tissue Box
+    400080: Tv_Set007
+    2300000: BlackBoard005
+    2300002: Board
+    2300004: Box012
+    2300006: Cabinet008
+    2300008: Caller009
+    2300010: curtain-019
+    2300012: curtain-020
+    2300014: Desk.001
+    2300016: Door-018
+    2300018: Door-019
+    2300020: garbageCan033
+    2300022: garbageCan034
+    2300024: garbageCan035
+    2300026: Lamp008
+    2300028: Laptop
+    2300030: Medic_Bed-00
+    2300032: Medic_Bed-01
+    2300034: Medic_Bed-02
+    2300036: Medic_Bed-03
+    2300038: Medic_Bed-04
+    2300040: Medic_Bed-05
+    2300042: Medic_Bed-06
+    2300044: Medic_Bed-07
+    2300046: Medic_Bed-08
+    2300048: Medic_Bed-09
+    2300050: Medic_Bed-10
+    2300052: Medic_Bed_c-00
+    2300054: Medic_Bed_c-01
+    2300056: Room_Patient_1-019
+    2300058: Room_Patient_1-020
+    2300060: Tissue Box
+    3300000: BlackBoard005
+    3300002: Board
+    3300004: Box012
+    3300006: Cabinet008
+    3300008: Caller009
+    3300010: curtain-019
+    3300012: curtain-020
+    3300014: Desk.001
+    3300016: Door-018
+    3300018: Door-019
+    3300020: garbageCan033
+    3300022: garbageCan034
+    3300024: garbageCan035
+    3300026: Lamp008
+    3300028: Laptop
+    3300030: Medic_Bed-00
+    3300032: Medic_Bed-01
+    3300034: Medic_Bed-02
+    3300036: Medic_Bed-03
+    3300038: Medic_Bed-04
+    3300040: Medic_Bed-05
+    3300042: Medic_Bed-06
+    3300044: Medic_Bed-07
+    3300046: Medic_Bed-08
+    3300048: Medic_Bed-09
+    3300050: Medic_Bed-10
+    3300052: Medic_Bed_c-00
+    3300054: Medic_Bed_c-01
+    3300056: Room_Patient_1-019
+    3300058: Room_Patient_1-020
+    3300060: Tissue Box
+    4300000: Caller009
+    4300002: curtain-020
+    4300004: curtain-019
+    4300006: garbageCan035
+    4300008: garbageCan034
+    4300010: garbageCan033
+    4300012: BlackBoard005
+    4300014: Door-019
+    4300016: Door-018
+    4300018: Lamp008
+    4300020: Cabinet008
+    4300022: Room_Patient_1-019
+    4300024: Room_Patient_1-020
+    4300026: Tissue Box
+    4300028: Desk.001
+    4300030: Laptop
+    4300032: Box012
+    4300034: Board
+    4300036: Medic_Bed-00
+    4300038: Medic_Bed-01
+    4300040: Medic_Bed-02
+    4300042: Medic_Bed-03
+    4300044: Medic_Bed-04
+    4300046: Medic_Bed-05
+    4300048: Medic_Bed-06
+    4300050: Medic_Bed-07
+    4300052: Medic_Bed-08
+    4300054: Medic_Bed-09
+    4300056: Medic_Bed-10
+    4300058: Medic_Bed_c-00
+    4300060: Medic_Bed_c-01
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

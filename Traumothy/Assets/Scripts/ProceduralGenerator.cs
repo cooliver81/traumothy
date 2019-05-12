@@ -9,7 +9,7 @@ public class ProceduralGenerator : MonoBehaviour {
     int numberTurns = 100;
     int startingPos;
 
-    public int numPatients = 0;
+    static public int numPatients = 0;
 
     // List of prefabs maptiles
     [SerializeField] GameObject[] rooms;

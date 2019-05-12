@@ -25,6 +25,8 @@ public class OL_PlayerController : MonoBehaviour {
     private bool isHit = false;
     private bool isDead = false;
 
+    public AudioSource smooch;
+
     // Use this for initialization
     void Start () {
        
@@ -134,6 +136,7 @@ public class OL_PlayerController : MonoBehaviour {
             lives--;
             InvokeRepeating("Blink", 0, blinkingSpeed);
             player.SetActive(true);
+            smooch.Play(0);
         }
 
         if (other.gameObject.tag == "End")
@@ -175,7 +178,10 @@ public class OL_PlayerController : MonoBehaviour {
             platformMov.enabled = false;
             player.SetActive(false);
             livesText.GetComponent<Text>().text = "LIVES : 0";
-            //you lost....
+            GameManager.patientDied++;
+            GameManager.paused = false;
+            GameManager.mainCam.enabled = true;
+            gm.ResumeMainGame(3);
         }
     }
 

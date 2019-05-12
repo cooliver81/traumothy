@@ -10,21 +10,46 @@ public class WarPlayerController : MonoBehaviour {
     public Rigidbody2D rb;
 
     private float movement = 0f;
+    public bool isDead = false;
 
     public int lives = 3;
+
+    public GameManager gm;
+    public Camera cam;
 
     public GameObject health1;
     public GameObject health2;
     public GameObject health3;
 
+    public AudioSource explosion;
+
     // Use this for initialization
     void Start () {
-      
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isDead)
+        {
+            isDead = false;
+            GameManager.paused = false;
+            GameManager.mainCam.enabled = true;
+            GameManager.patientDied++;
+            gm.ResumeMainGame(2);
+        }
+        if (GameManager.paused)
+        {
+
+            GameManager.mainCam.enabled = false;
+        }
+        else
+        {
+            GameManager.mainCam.enabled = true;
+            cam.enabled = false;
+        }
+
         movement = Input.GetAxis("Horizontal") * speed;
     }
 
@@ -37,6 +62,7 @@ public class WarPlayerController : MonoBehaviour {
     {
         if ( this.gameObject.layer == 11 && collision.gameObject.layer == 12) {
             lives--;
+            explosion.Play(0);
             switch (lives)
             {
                 case 2:
@@ -53,7 +79,7 @@ public class WarPlayerController : MonoBehaviour {
 
         if (lives <= 0)
         {
-            SceneManager.LoadScene("War");
+            isDead = true;
         }
         Debug.Log(lives);
 

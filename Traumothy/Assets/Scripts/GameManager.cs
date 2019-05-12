@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour {
 
 
     public static int patientRescued = 0;
+    public static int patientDied = 0;
     public static bool paused = false, isRescued = false;
     LevelChanger levelchanger;
 
@@ -33,6 +34,16 @@ public class GameManager : MonoBehaviour {
         {
             playerController.enabled = true;
             npcInteract.enabled = true;
+        }
+
+        if (patientRescued >= 3)
+        {
+            //WIN GAME
+            SceneManager.LoadScene(0);
+        } else if ((patientDied >= 3))
+        {
+            //LOSE GAME
+            SceneManager.LoadScene(0);
         }
     }
 

@@ -10,7 +10,7 @@ public class DoorRotation : MonoBehaviour {
     bool playerInFront;
 
     float time =0;
-    public float totalTime = 10.0f;
+    public float totalTime = 5.0f;
 
     bool opened=false;
 

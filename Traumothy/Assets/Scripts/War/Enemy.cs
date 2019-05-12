@@ -46,6 +46,7 @@ public class Enemy : MonoBehaviour {
             if (counter > 3)
             {
                 GameManager.patientRescued++;
+                GameManager.isRescued = true;
                 GameManager.paused = false;
                 GameManager.mainCam.enabled = true;
                 gm.ResumeMainGame(2);

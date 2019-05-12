@@ -7,15 +7,19 @@ public class GameManager : MonoBehaviour {
 
 
     public static int patientRescued = 0;
-    public static bool paused = false;
+    public static bool paused = false, isRescued = false;
+    LevelChanger levelchanger;
 
     public static Camera mainCam;
     public PlayerController playerController;
     public NPCInteractions npcInteract;
+
+
     // Use this for initialization
     void Start() {
         Debug.Log(patientRescued);
         mainCam = Camera.main;
+        levelchanger = GameObject.Find("LevelChanger").GetComponent<LevelChanger>();
     }
 
     // Update is called once per frame
@@ -44,19 +48,24 @@ public class GameManager : MonoBehaviour {
     }
     public void StartWar()
     {
-        SceneManager.LoadScene("War", LoadSceneMode.Additive);
+        //SceneManager.LoadScene("War", LoadSceneMode.Additive);
+        levelchanger.fadeToLevel(2);
         paused = true;
     }
     public void StartGrandma()
     {
-        SceneManager.LoadScene("Old Lady", LoadSceneMode.Additive);
+        //SceneManager.LoadScene("Old Lady", LoadSceneMode.Additive);
+        levelchanger.fadeToLevel(3);
         paused = true;
 
     }
     public void StartClown()
     {
-        SceneManager.LoadScene("Clown", LoadSceneMode.Additive);
+        //SceneManager.LoadScene("Clown", LoadSceneMode.Additive);
+        levelchanger.fadeToLevel(4);
         paused = true;
 
     }
+
+
 }

@@ -38,6 +38,8 @@ public class NPCInteractions : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        CheckIfRescued();
+
         if (isTriggered)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -101,6 +103,18 @@ public class NPCInteractions : MonoBehaviour {
     public void CheckClipboard(int npc)
     {
         //text.GetComponent<TextMesh>().text = information[npc];
+    }
+
+    public void CheckIfRescued()
+    {
+        if (GameManager.isRescued)
+        {
+            Debug.Log(GameManager.isRescued);
+            GameManager.isRescued = false;
+            NPCTriggered.GetComponent<BoxCollider>().enabled = false;
+            isTriggered = false;
+
+        }
     }
 
     private void OnTriggerEnter(Collider other)

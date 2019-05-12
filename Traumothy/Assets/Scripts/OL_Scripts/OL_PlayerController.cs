@@ -141,6 +141,7 @@ public class OL_PlayerController : MonoBehaviour {
             Debug.Log("we are in the endgame");
             platformMov.enabled = false;
             GameManager.patientRescued++;
+            GameManager.isRescued = true;
             GameManager.paused = false;
             GameManager.mainCam.enabled = true;
             gm.ResumeMainGame(3);

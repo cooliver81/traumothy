@@ -201,7 +201,8 @@ public class ClownMove : MonoBehaviour
             switch (level)
             {
                 case 3:
-                    GameManager.patientRescued++;
+                    GameManager.patientRescued++; // a modifier
+                    GameManager.isRescued = true; // a modifier
                     GameManager.paused = false;
                     GameManager.mainCam.enabled = true;
                     gm.ResumeMainGame(4);

@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class NPCInteractions : MonoBehaviour {
 
-    private GameObject NPCTriggered;
     public GameManager gm;
-    public GameObject text;
+
+    private GameObject NPCTriggered;
+
+    public GameObject dialogueBox;
 
     public bool isTriggered = false;
     private enum NPC_ID {NPC1, NPC2, NPC3};
@@ -15,43 +18,78 @@ public class NPCInteractions : MonoBehaviour {
 
     public string[] information = new string[3];
 
+    bool dialogueOnScreen = false;
+
+    LevelChanger levelchanger;
+
     // Use this for initialization
     void Start () {
         //SET NPC INFORMATION
         information[0] = "Oliver is cool";
         information[1] = "Celinetherapper";
         information[2] = "helena stinks";
+        dialogueOnScreen = false;
+        dialogueBox = GameObject.Find("Box");
+        dialogueBox.SetActive(false);
+        levelchanger = GameObject.Find("LevelChanger").GetComponent<LevelChanger>();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
         if (isTriggered)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                showDialogue();
                 Debug.Log("isTriggered");
+            }
+            else
+                Debug.Log("isNOTTriggered");
+            }
+        if (dialogueOnScreen) {
+            if (Input.GetKeyDown(KeyCode.P))
+            {
                 switch (npcID)
                 {
                     case NPC_ID.NPC1:
                         Debug.Log("NPC1 triggered");
                         gm.StartWar();
+                        //levelchanger.fadeToLevel(2);
                         CheckClipboard(0);
                         break;
                     case NPC_ID.NPC2:
                         Debug.Log("NPC2 triggered");
                         gm.StartGrandma();
+                        //levelchanger.fadeToLevel(3);
                         CheckClipboard(1);
                         break;
                     case NPC_ID.NPC3:
                         Debug.Log("NPC3 triggered");
                         gm.StartClown();
+                        //levelchanger.fadeToLevel(2);
                         CheckClipboard(2);
                         break;
                 }
             }
-            else
-                Debug.Log("isNOTTriggered");
-            }
+        }
+            
+    }
+
+    void showDialogue() {
+        dialogueOnScreen = true;
+        dialogueBox.SetActive(true);
+        switch (npcID)
+        {
+            case NPC_ID.NPC1:
+                dialogueBox.transform.GetChild(2).GetComponent<Text>().text = information[0];
+                break;
+            case NPC_ID.NPC2:
+                dialogueBox.transform.GetChild(2).GetComponent<Text>().text = information[1];
+                break;
+            case NPC_ID.NPC3:
+                dialogueBox.transform.GetChild(2).GetComponent<Text>().text = information[2];
+                break;
+        }
     }
 
     public void CheckClipboard(int npc)

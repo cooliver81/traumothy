@@ -2618,6 +2618,11 @@ Prefab:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 311644668}
+    - target: {fileID: 114140561349212214, guid: cded3ffaeb9d735498a34e8ffef51ea3,
+        type: 2}
+      propertyPath: npcInteract
+      value: 
+      objectReference: {fileID: 311644671}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cded3ffaeb9d735498a34e8ffef51ea3, type: 2}
   m_IsPrefabParent: 0
@@ -6125,6 +6130,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1307962899}
   m_Script: {fileID: 11500000, guid: 81561da962aa75943b18d4b4ba796e51, type: 3}
+--- !u!114 &311644671 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114024862125942124, guid: cf55c8adeb6a0a14ba8ab83f07685778,
+    type: 2}
+  m_PrefabInternal: {fileID: 1307962899}
+  m_Script: {fileID: 11500000, guid: 368ef5c4b95cbe048a0082f32b207ea8, type: 3}
 --- !u!1 &315983335
 GameObject:
   m_ObjectHideFlags: 0

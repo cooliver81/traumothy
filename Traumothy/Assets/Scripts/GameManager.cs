@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour {
 
     public static Camera mainCam;
     public PlayerController playerController;
+    public NPCInteractions npcInteract;
     // Use this for initialization
     void Start() {
         Debug.Log(patientRescued);
@@ -22,10 +23,12 @@ public class GameManager : MonoBehaviour {
         if (paused)
         {
             playerController.enabled = false;
+            npcInteract.enabled = false;
         }
         else
         {
             playerController.enabled = true;
+            npcInteract.enabled = true;
         }
     }
 

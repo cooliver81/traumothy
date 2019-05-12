@@ -13,7 +13,7 @@ public class NPCInteractions : MonoBehaviour {
 
     public GameObject dialogueBox;
 
-
+    int spaceCount = 0;
     public bool isTriggered = false;
     private enum NPC_ID {NPC1, NPC2, NPC3};
     NPC_ID npcID;
@@ -42,20 +42,23 @@ public class NPCInteractions : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                spaceCount++;
                 showDialogue();
                 Debug.Log("isTriggered");
             }
             else
                 Debug.Log("isNOTTriggered");
             }
-        if (dialogueOnScreen) {
+        if (dialogueOnScreen && spaceCount >= 1) {
             if (Input.GetKeyDown(KeyCode.P))
             {
+                spaceCount = 0;
+                dialogueOnScreen = false;
+                dialogueBox.SetActive(false);
                 switch (npcID)
                 {
                     case NPC_ID.NPC1:
                         Debug.Log("NPC1 triggered");
-
                         gm.StartWar();
                         //levelchanger.fadeToLevel(2);
                         CheckClipboard(0);

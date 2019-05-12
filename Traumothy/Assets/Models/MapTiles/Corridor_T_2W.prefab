@@ -60,6 +60,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1201817532410204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4432612489007980}
+  - component: {fileID: 33647007945665272}
+  - component: {fileID: 23307759722411634}
+  m_Layer: 0
+  m_Name: VendingM001 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1301857609846668
 GameObject:
   m_ObjectHideFlags: 1
@@ -179,8 +196,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1864521422082298}
-  m_LocalRotation: {x: 0, y: 0, z: 0.9238793, w: 0.38268396}
-  m_LocalPosition: {x: -0.801665, y: -0.8107999, z: -0.41779083}
+  m_LocalRotation: {x: -0, y: -0, z: -0.35804248, w: 0.93370533}
+  m_LocalPosition: {x: 0.75, y: 0.772, z: -0.418}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4664482081494364}
@@ -188,7 +205,7 @@ Transform:
   - {fileID: 4220015205339890}
   m_Father: {fileID: 4638844299675846}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -41.960003}
 --- !u!4 &4164243659530862
 Transform:
   m_ObjectHideFlags: 1
@@ -215,6 +232,19 @@ Transform:
   m_Father: {fileID: 4062666088451466}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4432612489007980
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1201817532410204}
+  m_LocalRotation: {x: -0, y: -0, z: -0.35604224, w: 0.9344699}
+  m_LocalPosition: {x: -0.60546875, y: -0.5859375, z: -0.55859387}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4638844299675846}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -131.71501}
 --- !u!4 &4547692554582160
 Transform:
   m_ObjectHideFlags: 1
@@ -257,6 +287,7 @@ Transform:
   - {fileID: 4547692554582160}
   - {fileID: 4164243659530862}
   - {fileID: 4062666088451466}
+  - {fileID: 4432612489007980}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -313,6 +344,41 @@ Transform:
   m_Father: {fileID: 4587836317794130}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23307759722411634
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1201817532410204}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 2b6f6bf540d1de447909f002e5b1560c, type: 2}
+  - {fileID: 2100000, guid: 290cb26f49b8f5a4fbb757fcc6531639, type: 2}
+  - {fileID: 2100000, guid: 2d3b8ac57c23add40a4146058e4effeb, type: 2}
+  - {fileID: 2100000, guid: 21ea67383fe50d045b4f0fc205a4fc00, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!23 &23502365640956178
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -500,6 +566,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1578160503933258}
   m_Mesh: {fileID: 4300280, guid: 046d534ae66168c44a8d38095a3863b2, type: 3}
+--- !u!33 &33647007945665272
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1201817532410204}
+  m_Mesh: {fileID: 4300328, guid: 046d534ae66168c44a8d38095a3863b2, type: 3}
 --- !u!33 &33669558178882100
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -526,6 +599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDirection: 4
+  openingNeeded: 0
 --- !u!114 &114902156512762762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -538,3 +612,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDirection: 1
+  openingNeeded: 0

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class NPCInteractions : MonoBehaviour {
 
     private GameObject NPCTriggered;
-
+    public GameManager gm;
     public GameObject text;
 
     public bool isTriggered = false;
@@ -34,17 +34,17 @@ public class NPCInteractions : MonoBehaviour {
                 {
                     case NPC_ID.NPC1:
                         Debug.Log("NPC1 triggered");
-                        SceneManager.LoadScene(2);
+                        gm.StartWar();
                         CheckClipboard(0);
                         break;
                     case NPC_ID.NPC2:
                         Debug.Log("NPC2 triggered");
-                        SceneManager.LoadScene(3);
+                        gm.StartGrandma();
                         CheckClipboard(1);
                         break;
                     case NPC_ID.NPC3:
                         Debug.Log("NPC3 triggered");
-                        SceneManager.LoadScene(4);
+                        gm.StartClown();
                         CheckClipboard(2);
                         break;
                 }

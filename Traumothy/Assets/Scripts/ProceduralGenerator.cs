@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ProceduralGenerator : MonoBehaviour {
 
@@ -134,9 +135,9 @@ public class ProceduralGenerator : MonoBehaviour {
             }
         } else { // Searching corridors
             if (direction == 1) {
-                return corridorsT[Random.Range(0, corridorsB.Length - 1)];
+                 return corridorsT[Random.Range(0, corridorsT.Length - 1)];
             } else if (direction == 2) {
-                return corridorsB[Random.Range(0, corridorsT.Length - 1)];
+                 return corridorsB[Random.Range(0, corridorsB.Length - 1)];
             } else if (direction == 3) {
                 return corridorsL[Random.Range(0, corridorsL.Length - 1)];
             } else {

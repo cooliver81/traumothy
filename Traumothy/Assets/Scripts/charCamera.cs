@@ -28,7 +28,7 @@ public class charCamera : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void LateUpdate () {
+    void Update () {
         yaw += Input.GetAxis("Mouse X") * mouseSensitivity;
         pitch -= Input.GetAxis("Mouse Y") * mouseSensitivity;
         pitch = Mathf.Clamp(pitch, pitchMinMax.x, pitchMinMax.y);

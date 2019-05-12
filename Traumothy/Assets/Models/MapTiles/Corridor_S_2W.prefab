@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 4424003084604816}
   - component: {fileID: 33622889964200622}
   - component: {fileID: 23191721426229468}
+  - component: {fileID: 64104920604694794}
   m_Layer: 0
   m_Name: corridor-002
   m_TagString: Untagged
@@ -849,6 +850,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1019688442906420}
   m_Mesh: {fileID: 4300098, guid: 046d534ae66168c44a8d38095a3863b2, type: 3}
+--- !u!64 &64104920604694794
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1857151650237226}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300094, guid: 046d534ae66168c44a8d38095a3863b2, type: 3}
 --- !u!114 &114850198739545190
 MonoBehaviour:
   m_ObjectHideFlags: 1

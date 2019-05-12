@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NPCInteractions : MonoBehaviour {
 
@@ -26,30 +27,36 @@ public class NPCInteractions : MonoBehaviour {
 	void Update () {
         if (isTriggered)
         {
-            Debug.Log("isTriggered");
-            switch (npcID)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                case NPC_ID.NPC1:
-                    Debug.Log("NPC1 triggered");
-                    CheckClipboard(0);
-                    break;
-                case NPC_ID.NPC2:
-                    Debug.Log("NPC2 triggered");
-                    CheckClipboard(1);
-                    break;
-                case NPC_ID.NPC3:
-                    Debug.Log("NPC3 triggered");
-                    CheckClipboard(2);
-                    break;
+                Debug.Log("isTriggered");
+                switch (npcID)
+                {
+                    case NPC_ID.NPC1:
+                        Debug.Log("NPC1 triggered");
+                        SceneManager.LoadScene(2);
+                        CheckClipboard(0);
+                        break;
+                    case NPC_ID.NPC2:
+                        Debug.Log("NPC2 triggered");
+                        SceneManager.LoadScene(3);
+                        CheckClipboard(1);
+                        break;
+                    case NPC_ID.NPC3:
+                        Debug.Log("NPC3 triggered");
+                        SceneManager.LoadScene(4);
+                        CheckClipboard(2);
+                        break;
+                }
             }
-        }
-        else
-            Debug.Log("isNOTTriggered");
+            else
+                Debug.Log("isNOTTriggered");
+            }
     }
 
     public void CheckClipboard(int npc)
     {
-        text.GetComponent<TextMesh>().text = information[npc];
+        //text.GetComponent<TextMesh>().text = information[npc];
     }
 
     private void OnTriggerEnter(Collider other)

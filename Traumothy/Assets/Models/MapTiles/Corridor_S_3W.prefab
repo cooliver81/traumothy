@@ -67,6 +67,7 @@ GameObject:
   - component: {fileID: 4304175004023860}
   - component: {fileID: 33915950827664612}
   - component: {fileID: 23431154502450156}
+  - component: {fileID: 64007546006923116}
   m_Layer: 0
   m_Name: corridor-008
   m_TagString: Untagged
@@ -301,6 +302,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1561030216889974}
   m_Mesh: {fileID: 4300338, guid: 046d534ae66168c44a8d38095a3863b2, type: 3}
+--- !u!64 &64007546006923116
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1561030216889974}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300338, guid: 046d534ae66168c44a8d38095a3863b2, type: 3}
 --- !u!114 &114060056270060176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -313,6 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDirection: 3
+  openingNeeded: 0
 --- !u!114 &114271448564633364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -325,6 +341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDirection: 4
+  openingNeeded: 0
 --- !u!114 &114349640651584210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -337,3 +354,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDirection: 2
+  openingNeeded: 0

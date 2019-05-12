@@ -62,14 +62,12 @@ public class ProceduralGenerator : MonoBehaviour {
         // Instantiate maptile
         GameObject maptile = instantiatePrefab(mapPosition, toInstantiate);
 
-        //return;
-
         // Check if we still want to instantiate corridors
         //Debug.Log("Number of turns: " + turns);
         if (turns != 0)
         {
             // Decide random number of corridors to instantiate
-            int corridorsToInstantiate = Random.Range(1, maptile.transform.GetChild(0).transform.childCount - 1);
+            int corridorsToInstantiate = Random.Range(1, maptile.transform.GetChild(0).transform.childCount - 2);
             //Debug.Log("Corridors to instantiate: " + corridorsToInstantiate);
             bool instantiatingDoors = false;
             // Check for each jointpoint if it can open a new corridor
@@ -101,7 +99,7 @@ public class ProceduralGenerator : MonoBehaviour {
                     instantiateWall(jointpoints.gameObject.GetComponent<JointPoints>().openingDirection, jointpoints);
                 }
             }
-        }else {
+        } else {
             // Add rooms 
             // Check for each jointpoint if it can open a new corridor
             foreach (Transform jointpoints in maptile.transform.GetChild(0).transform)
@@ -136,13 +134,13 @@ public class ProceduralGenerator : MonoBehaviour {
             }
         } else { // Searching corridors
             if (direction == 1) {
-                return corridorsT[Random.Range(0, corridorsB.Length - 2)];
+                return corridorsT[Random.Range(0, corridorsB.Length - 1)];
             } else if (direction == 2) {
-                return corridorsB[Random.Range(0, corridorsT.Length - 2)];
+                return corridorsB[Random.Range(0, corridorsT.Length - 1)];
             } else if (direction == 3) {
-                return corridorsL[Random.Range(0, corridorsL.Length - 2)];
+                return corridorsL[Random.Range(0, corridorsL.Length - 1)];
             } else {
-                return corridorsR[Random.Range(0, corridorsR.Length - 2)];
+                return corridorsR[Random.Range(0, corridorsR.Length - 1)];
             }      
         }
         return null;

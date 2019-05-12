@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour {
     public float walkSpeed = 2;
     public float runSpeed = 6;
 
-    Animator animator;
+    //Animator animator;
     Transform cameraT;
 
     public float turnSmoothTime = 0.2f;
@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        animator = GetComponent<Animator>();
+       // animator = GetComponent<Animator>();
         cameraT = Camera.main.transform;
 	}
 	
@@ -40,8 +40,8 @@ public class PlayerController : MonoBehaviour {
 
         transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
 
-        float animationSpeedPercent = ((running) ? 1 : 0.5f) * inputDir.magnitude;
-        animator.SetFloat("speedPercent", animationSpeedPercent, speedSmoothTime, Time.deltaTime);
+        //float animationSpeedPercent = ((running) ? 1 : 0.5f) * inputDir.magnitude;
+        //animator.SetFloat("speedPercent", animationSpeedPercent, speedSmoothTime, Time.deltaTime);
 
     }
 }

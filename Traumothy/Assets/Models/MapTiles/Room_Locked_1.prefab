@@ -439,6 +439,7 @@ GameObject:
   - component: {fileID: 4165089418735112}
   - component: {fileID: 33050532833091036}
   - component: {fileID: 23273122344488526}
+  - component: {fileID: 64293585203163776}
   m_Layer: 0
   m_Name: Room_Patient_1-010
   m_TagString: Untagged
@@ -2698,6 +2699,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1104649182869660}
   m_Mesh: {fileID: 4300498, guid: 046d534ae66168c44a8d38095a3863b2, type: 3}
+--- !u!64 &64293585203163776
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1669450718144946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300482, guid: 046d534ae66168c44a8d38095a3863b2, type: 3}
 --- !u!114 &114942828835305442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2710,3 +2725,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDirection: 4
+  openingNeeded: 0

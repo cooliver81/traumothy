@@ -497,9 +497,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4862817637846482}
   - component: {fileID: 111435329051309060}
+  - component: {fileID: 65161816725826698}
   m_Layer: 0
   m_Name: Patient (4)
-  m_TagString: Untagged
+  m_TagString: NPC1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -629,6 +630,7 @@ GameObject:
   - component: {fileID: 4255871183349234}
   - component: {fileID: 33218370123613774}
   - component: {fileID: 23346111587958320}
+  - component: {fileID: 64539189622488642}
   m_Layer: 0
   m_Name: Room_Patient_1-007
   m_TagString: Untagged
@@ -4343,6 +4345,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1808042240043694}
   m_Mesh: {fileID: 4300418, guid: 046d534ae66168c44a8d38095a3863b2, type: 3}
+--- !u!64 &64539189622488642
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1485759917038388}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300372, guid: 046d534ae66168c44a8d38095a3863b2, type: 3}
+--- !u!65 &65161816725826698
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1431983526851118}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!111 &111435329051309060
 Animation:
   m_ObjectHideFlags: 1
